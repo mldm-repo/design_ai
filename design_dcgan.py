@@ -1,5 +1,5 @@
 """
-DC-GAN implementation using numpy arrays as inputs (the images must be converted to np arrays)
+DC-GAN implementation using numpy arrays as inputs (the images must be converted to np arrays)  
 
 point the 'x_train' variable inside the build_and_train_models() function to the '.npy' (convert the images to np arrays and store them as .npy file) file 
 """
