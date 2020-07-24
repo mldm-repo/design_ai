@@ -1,5 +1,5 @@
 """
-DC-GAN implementation using pytorch, this takes in actual images as input (this produces 128x128 sized images)
+DC-GAN implementation using pytorch, this takes in actual images as input (this produces 128x128 sized images)  
 
 change the 'dataroot' variable to the directory containing the original images 
 
