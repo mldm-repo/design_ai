@@ -1,6 +1,6 @@
 """
 This file is used to resize all the images to size 256x256 to standardise the images used for training
-
+   
 change the 'path' variable to point to the directory source containing the images
 change the 'name' variable inside the last for loop to store the resized images into the target directory 
 """
