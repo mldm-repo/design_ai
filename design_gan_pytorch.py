@@ -237,7 +237,7 @@ criterion = nn.BCELoss() #nn.MSELoss() #change the loss to MSELoss() for ls-gan
 
 # Create batch of latent vectors that we will use to visualize
 #  the progression of the generator
-fixed_noise = torch.randn(64, nz, 1, 1, device=device)
+fixed_noise = torch.randn(64, nz, 1, 1)
 
 # Establish convention for real and fake labels during training
 real_label = 1
@@ -270,9 +270,9 @@ for epoch in range(num_epochs):
         ## Train with all-real batch
         netD.zero_grad()
         # Format batch
-        real_cpu = data[0].to(device)
+        real_cpu = data[0]
         b_size = real_cpu.size(0)
-        label = torch.full((b_size,), real_label, device=device)
+        label = torch.full((b_size,), real_label)
         # Forward pass real batch through D
         output = netD(real_cpu).view(-1)
         # Calculate loss on all-real batch
@@ -283,7 +283,7 @@ for epoch in range(num_epochs):
 
         ## Train with all-fake batch
         # Generate batch of latent vectors
-        noise = torch.randn(b_size, nz, 1, 1, device=device)
+        noise = torch.randn(b_size, nz, 1, 1)
         # Generate fake image batch with G
         fake = netG(noise)
         label.fill_(fake_label)
