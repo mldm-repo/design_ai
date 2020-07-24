@@ -1,7 +1,7 @@
 """
 This is used to enhance images using EDSR super resolution
 
-Download and store the EDSR_x3.pb files from github and change the 'pbPath' variable to point to the '.pb' files
+Download and store the EDSR_x3.pb files from github and change the 'pbPath' variable to point to the '.pb' files  
 """
 
 import tensorflow as tf
